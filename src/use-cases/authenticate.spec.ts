@@ -27,11 +27,6 @@ describe('Authenticate Use Case', () => {
       password: '123456'
     })
 
-    const isPasswordCorrectlyHashed = await compare(
-      '123456',
-      user.password_hash,
-    )
-
     await expect(user.id).toEqual(expect.any(String))
   })
 
